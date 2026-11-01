@@ -10,26 +10,36 @@
 	body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
 	main { max-width: 640px; margin: 0 auto; padding: 32px 16px; }
 	h1 { margin: 0 0 4px; font-size: 1.6rem; }
-	p { color: var(--muted); margin: 0 0 24px; }
-	ul { list-style: none; padding: 0; margin: 0 0 24px; }
+	h2 { font-size: 1.05rem; margin: 28px 0 8px; }
+	p { color: var(--muted); margin: 0 0 16px; }
+	ul { list-style: none; padding: 0; margin: 0 0 16px; }
 	li { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; margin-bottom: 10px; }
 	a { color: var(--accent); font-weight: 600; word-break: break-all; }
 	small { display: block; color: var(--muted); }
 	ol { color: var(--muted); padding-left: 20px; }
+	code { word-break: break-all; }
 </style>
 </head>
 <body>
 <main>
 <h1>MBOptScrapers</h1>
-<p>Add-ons de Kodi para instalar desde un archivo zip.</p>
+<p>Repositorio de Kodi con MBOptScrapers y el puente CocoScrapers.</p>
 <ul>
-	<li><a href="script.module.mboptscrapers-1.0.0.zip">script.module.mboptscrapers-1.0.0.zip</a><small>MBOptScrapers 1.0.0 — el módulo de scrapers. Instálalo primero.</small></li>
-	<li><a href="script.module.cocoscrapers-2.0.0.zip">script.module.cocoscrapers-2.0.0.zip</a><small>Puente CocoScrapers 2.0.0 — para add-ons que buscan CocoScrapers (Umbrella, Fen…). Instálalo después.</small></li>
+	<li><a href="repository.mboptscrapers-1.0.0.zip">repository.mboptscrapers-1.0.0.zip</a><small>Repositorio — instala solo este zip; el resto se instala y actualiza desde el repositorio.</small></li>
 </ul>
+<h2>Instalación</h2>
 <ol>
-	<li>En Kodi: Ajustes → Gestor de archivos → Añadir fuente → <code>https://mburgosortiz2.github.io/</code></li>
-	<li>Add-ons → Instalar desde un archivo zip → elige la fuente → instala los dos zips en este orden.</li>
+	<li>Ajustes → Sistema → Add-ons → activa <b>Orígenes desconocidos</b>.</li>
+	<li>Ajustes → Gestor de archivos → Añadir fuente → <code>https://mburgosortiz2.github.io/</code> → nómbrala <b>MBOPT</b>.</li>
+	<li>Add-ons → Instalar desde un archivo zip → <b>MBOPT</b> → <b>repository.mboptscrapers-1.0.0.zip</b>.</li>
+	<li>Add-ons → Instalar desde repositorio → <b>MBOptScrapers Repository</b> → Add-ons de programas → <b>MBOptScrapers Module</b> → Instalar.</li>
+	<li>Si tu add-on de vídeo busca CocoScrapers (Umbrella, Fen…), instala también <b>CocoScrapers bridge (MBOptScrapers)</b> desde el mismo repositorio.</li>
 </ol>
+<h2>Zips sueltos</h2>
+<ul>
+	<li><a href="repo/script.module.mboptscrapers/script.module.mboptscrapers-1.0.0.zip">script.module.mboptscrapers-1.0.0.zip</a><small>MBOptScrapers — el módulo de scrapers.</small></li>
+	<li><a href="repo/script.module.cocoscrapers/script.module.cocoscrapers-2.0.0.zip">script.module.cocoscrapers-2.0.0.zip</a><small>Puente CocoScrapers — para add-ons que buscan CocoScrapers. Requiere MBOptScrapers.</small></li>
+</ul>
 </main>
 </body>
 </html>

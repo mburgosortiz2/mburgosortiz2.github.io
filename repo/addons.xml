@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="repository.mboptscrapers" name="MBOptScrapers Repository" version="1.0.0" provider-name="MBOptScrapers">
+	<extension point="xbmc.addon.repository" name="MBOptScrapers Repository">
+		<dir>
+			<info compressed="false">https://mburgosortiz2.github.io/repo/addons.xml</info>
+			<checksum>https://mburgosortiz2.github.io/repo/addons.xml.md5</checksum>
+			<datadir zip="true">https://mburgosortiz2.github.io/repo/</datadir>
+		</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">MBOptScrapers Repository</summary>
+		<description lang="en">Install and update MBOptScrapers and the CocoScrapers bridge.</description>
+		<platform>all</platform>
+		<license>GPL-3.0-only</license>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.png</fanart>
+		</assets>
+	</extension>
+</addon>
+<addon id="script.module.mboptscrapers" name="MBOptScrapers Module" version="1.0.0" provider-name="MBOptScrapers">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="script.module.requests" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="lib/default.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.service" library="lib/service.py" start="startup" />
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<reuselanguageinvoker>false</reuselanguageinvoker>
+		<summary lang="en">MBOptScrapers - torrent scrapers for debrid services</summary>
+		<description lang="en">Scraper module for video add-ons: searches 16 torrent providers (Stremio APIs, JSON APIs, RSS and HTML) and returns magnet links for debrid services.[CR]Rebuilt from CocoScrapers 1.0.32 (CocoJoe, GPL-3.0), itself based on FenomScrapers. Install the "CocoScrapers bridge" add-on to keep add-ons that expect CocoScrapers (Umbrella, Fen...) working.</description>
+		<platform>all</platform>
+		<license>GPL-3.0-only</license>
+		<forum></forum>
+		<website></website>
+		<source></source>
+		<disclaimer lang="en">The author is not responsible for the use of this addon or for the content found using it. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.</disclaimer>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.png</fanart>
+		</assets>
+		<news>v1.0.0: first MBOptScrapers release, rebuilt from CocoScrapers 1.0.32. See the changelog in the settings.</news>
+	</extension>
+</addon>
+<addon id="script.module.cocoscrapers" name="CocoScrapers bridge (MBOptScrapers)" version="2.0.0" provider-name="MBOptScrapers">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="script.module.mboptscrapers" version="1.0.0" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="lib/default.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Compatibility bridge: CocoScrapers is now MBOptScrapers</summary>
+		<description lang="en">Contains no scrapers. Video add-ons that look for CocoScrapers (Umbrella, Fen...) are transparently redirected to MBOptScrapers. Configure providers in the MBOptScrapers settings.</description>
+		<platform>all</platform>
+		<license>GPL-3.0-only</license>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+		<news>v2.0.0: replaces CocoScrapers with a bridge to MBOptScrapers.</news>
+	</extension>
+</addon>
+</addons>
